@@ -234,7 +234,7 @@
         },
         // 计算属性数据
         computed: {
-          // 处理搜索词
+          // 处理搜索词 通过indexOf()查找是否出现@符号,出现@符号通过设置slice()截取符号之前的内容
           dealMsg() {
             // 查找是否出现 @ 符号
             let index = this.msg.indexOf("@");
@@ -350,6 +350,10 @@ vue允许我们在显示隐藏元素以及创建删除元素过程中，**添加
 
 ![image-20230209152959070](C:\Users\19510\AppData\Roaming\Typora\typora-user-images\image-20230209152959070.png)
 
+
+
+### 过渡效果
+
 `transition`元素(组件)是由vue提供的。可以为内部的元素添加过渡效果。
 
 ​		 可以通过`name`属性设置过渡名称，之后就会根据该名称创建六个类， 
@@ -365,6 +369,34 @@ vue允许我们在显示隐藏元素以及创建删除元素过程中，**添加
 ​						 `.demo-leave` 	`.demo-leave-to` 		`.demo-leave-active`
 
 ​		我们基于这六个类，实现css过渡或者动画（借助于css3实现的）
+
+
+
+```html
+  <body>
+    <div id="app">
+      <button @click="isShow = !isShow">切换</button>
+      <!-- 
+        通过 transition 组件设置过渡
+          可以通过 name设置过渡名称 如：.demo-enter
+
+        -->
+      <transition name="demo">
+        <div class="box" v-if="isShow"></div>
+      </transition>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+      let vm = new Vue({
+        el: "#app",
+        data: {
+          isShow: true,
+        },
+      });
+    </script>
+  </body>
+```
 
 
 
@@ -464,7 +496,7 @@ vue允许我们在显示隐藏元素以及创建删除元素过程中，**添加
   </body>
 ```
 
-**入场过渡**
+### **入场过渡**
 
 ​		 我们通过为transition组件添加`appear`属性，实现入场过渡：当元素加载的时候，执行动画。
 
@@ -478,7 +510,7 @@ vue允许我们在显示隐藏元素以及创建删除元素过程中，**添加
 
 
 
-**过渡事件**
+### **过渡事件**
 
 css3过渡和动画有事件，我们可以通过DOM监听到。
 
@@ -571,7 +603,7 @@ vue实现的过渡也可以监听动画开始与结束的事件，
 
 
 
-**多元素过渡**
+### **多元素过渡**
 
 我们可以在transition中，定义多个元素，实现多个元素之间的过渡。
 

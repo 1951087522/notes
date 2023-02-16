@@ -29,7 +29,7 @@
             特点
               1.一组单选框绑定同一份数据
               2.选框的值通过value属性定义
-              3.此时checked属性定义
+              3.此时checked属性失效
               4.一组单选框的默认值就是绑定数据的值
         -->
         <input type="radio" v-model="sex" value="man" checked />男
@@ -64,9 +64,9 @@ new Vue({
 
 ​		 1 一组多选框绑定不同的数据，为了访问方便，我们将其放在同一个命名空间下。
 
-​		 2 选框的值==默认是布尔值==
+​		 2 选框的值==默认是布尔值 ==
 
-​				通过v-bind:true-value以及v-bind:false-value可以自定义其值：
+​				通过v-bind:true-value以及v-bind:false-value可以自定义其值：	内部是JS环境
 
 ​				 :true-value：定义选中时候的值 
 
@@ -94,7 +94,7 @@ new Vue({
               如果自定义了 :true-value以及:false-value属性 就是自定义数据值
         -->
         <label for="">请选择兴趣爱好：</label>
-        <input type="checkbox" v-model="interset.basketball"  :true-value="'选中了'"  :false-value="'未选中'" checked />篮球 	   <input type="checkbox" v-model="interset.football" />足球
+         <input type="checkbox" v-model="interset.basketball"  :true-value="'选中了'"  :false-value="'未选中'" checked />篮球 	    <input type="checkbox" v-model="interset.football" />足球
         <input type="checkbox" v-model="interset.pingpang" />乒乓球
         <h1>{{interset}}</h1>
       </div>
@@ -489,8 +489,6 @@ new Vue({
   }
 })
 ```
-
-
 
 
 
@@ -1198,30 +1196,48 @@ vue模拟js中的for in循环语句实现了`v-for`循环模板指令：
 
 ```html
     <div id="app">
+      <!-- 
+        循环模板指令
+          v-for="(item,index) in data"
+            data 表示循环的数据 可以是数字 对象 数组
+              数字  item表示数值从1开始 index表示索引值从0开始
+              数组  item表示成员值  index表示索引值
+              对象  item表示value属性值 index表示Key属性
+
+          设置key属性 
+        -->
+
       <ul>
-        <!-- 数字 
-          如果是数字：item 表示数值（从1计数）。 index 表示索引值（从0计数）
-        -->
         <label for="">数字</label>
-        <!-- <li v-for="item in num" wx-key="item">{{item}}</li> -->
-        <!-- 遍历成员和索引值 -->
-        <li v-for="(item,index) in num" wx-key="item">{{item}}--{{index}}</li>
-
-        <!-- 对象 
-          如果是对象：item 表示value（属性值）。 index 表示key（属性名称）
-        -->
-        <label for="">对象</label>
-        <li v-for="(value,key) in obj" wx-key="item">{{key}}--{{value}}</li>
-
-        <!-- 数组 
-          如果是数组：item 表示成员值。 index 表示索引值
-        -->
+        <!-- 数字  item表示数值从1开始 index表示索引值从0开始 -->
+        <li v-for="(item,index) in num" :key="item">{{item}} {{index}}</li>
+        <hr />
+        <!-- 数组   item表示成员值  index表示索引值 -->
         <label for="">数组</label>
-        <li v-for="(item,index) of colors" wx:key="item">
-          {{item}}--{{index}}
-        </li>
+        <li v-for="(item,index) in colors" :key="item">{{item}} {{index}}</li>
+        <hr />
+        <!-- 对象   item表示value属性值   index表示key属性 -->
+        <label for="">对象</label>
+        <li v-for="(value,key) in obj" :key="key">{{value}} {{key}}</li>
       </ul>
     </div>
+```
+
+```js
+import Vue from 'vue'
+
+new Vue({
+  el: '#app',
+  data: {
+    num: 10,
+    obj: {
+      title: 'nihao',
+      color: 'red',
+      abc: 'hello abc'
+    },
+    colors: ['red', 'green', 'blue', 'pink', 'purple']
+  },
+})
 ```
 
 
