@@ -217,7 +217,7 @@ $el 代表视图中的容器元素。
 
 ES6文件拓展名可以是.es,也可以是.js等。但是在工作中到底使用哪种方式，要看使用的编辑器。
 
-![image-20230207152945233](C:\Users\19510\AppData\Roaming\Typora\typora-user-images\image-20230207152945233.png)
+![](E:\AIC\notes\11-Vue\assets\image-20230207152945233.png)
 
 解决  runtime-only  问题
 

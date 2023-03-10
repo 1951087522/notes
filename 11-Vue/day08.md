@@ -28,7 +28,7 @@
 
 2、选择第三项自定义添加：
 
-![](E:\AIC\notes\11-Vue\01.png)
+![](E:\AIC\notes\11-Vue\assets\01.png)
 
 ​				Default([Vue 3] babel, eslint):vue3的项目，只包含js编译器babel，代码检测工具eslint。
 
@@ -38,7 +38,7 @@
 
 3、选择配置 (空格选中）：
 
-![](E:\AIC\notes\11-Vue\2.png)
+![](E:\AIC\notes\11-Vue\assets\2.png)
 
 ​	
 
@@ -54,35 +54,35 @@
 
 4、选择vue3(按照自己需求来)
 
-![](E:\AIC\notes\11-Vue\3.png)
+![](E:\AIC\notes\11-Vue\assets\3.png)
 
 5、路由采用history模式
 
-![](E:\AIC\notes\11-Vue\4.png)
+![](E:\AIC\notes\11-Vue\assets\4.png)
 
 6、选择CSS预处理器：（with node sass)
 
-![](E:\AIC\notes\11-Vue\5.png)
+![](E:\AIC\notes\11-Vue\assets\5.png)
 
 7、选择第三个标准配置：（第一个）
 
-![](E:\AIC\notes\11-Vue\6.png)
+![](E:\AIC\notes\11-Vue\assets\6.png)
 
 8、选择第一个，编写代码时提示错误：
 
-![](E:\AIC\notes\11-Vue\7.png)
+![](E:\AIC\notes\11-Vue\assets\7.png)
 
 9、Babel、ESLint 等的配置存放选择都存放在package.json中，选择第二项：（单独创建 选择第一项）
 
-![](E:\AIC\notes\11-Vue\8.png)
+![](E:\AIC\notes\11-Vue\assets\8.png)
 
 10、保存设置为demo,下次再次创建项目时便会多出一个demo选项，不需再次配置即可直接使用：（ 选择  n)
 
-![](E:\AIC\notes\11-Vue\9.png)
+![](E:\AIC\notes\11-Vue\assets\9.png)
 
 11、敲击回车等待后创建完成：
 
-![](E:\AIC\notes\11-Vue\10.png)
+![](E:\AIC\notes\11-Vue\assets\10.png)
 
 
 

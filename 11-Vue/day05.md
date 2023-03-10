@@ -363,7 +363,7 @@ flux包含了四个模块
 
 ​	 一个组件发布了一个action对象。action被dispatcher捕获，根据消息类型处理数据。store会存储新的数据，并将新的数据传递给另一个组件。
 
-![](./flux.png)
+![](./assets/flux.png)
 
 
 
@@ -385,7 +385,7 @@ vuex由三部分组成：
 
 ​		 views  组件视图
 
-<img src="./vuex.png" style="zoom:50%;" />
+<img src="./assets/vuex.png" style="zoom:50%;" />
 
 
 
@@ -441,7 +441,7 @@ vuex由三部分组成：
 
 
 
-<img src="./通信流程.png" style="zoom: 150%">
+<img src="./assets/通信流程.png" style="zoom: 150%">
 
 
 

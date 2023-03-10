@@ -348,7 +348,7 @@
 
 vue允许我们在显示隐藏元素以及创建删除元素过程中，**添加过渡效果**。
 
-![image-20230209152959070](C:\Users\19510\AppData\Roaming\Typora\typora-user-images\image-20230209152959070.png)
+![](E:\AIC\notes\11-Vue\assets\image-20230209152959070.png)
 
 
 

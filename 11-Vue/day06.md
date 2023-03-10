@@ -1216,3 +1216,30 @@ app.get('*', (req, res) => {
 app.listen(3000, () => console.log(3000));
 ```
 
+
+
+```js
+/* 
+  vue3中的改变
+    当前项目需要的模块  yarn add || npm i 
+      vuex vue-router sass axios
+
+    store
+      引入vuex
+      解构 {createStore}
+      执行方式创建vuex
+
+    vue-router
+      引入vue-router
+      解构数据 {createRouter,createWebHashHistory}
+      createRouter({routes},history:createWebHashHistory())
+
+    router-link
+      <router-link custom v-slot="{navigate}">自定义标签</router-link>
+
+    注册功能
+      app.use(xxx)
+
+*/
+```
+
